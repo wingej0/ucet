@@ -5,11 +5,15 @@ format:
   revealjs: 
     theme: default
     transition: slide
-    background-transition: fade
-    background-image: "img/bg.png"
+    background-image: https://i.imgur.com/aQ7CP4T.png
     background-size: "cover"
+    background-transition: fade
     navigation-mode: linear
 ---
+
+# Presentation Link
+
+![https://wingej0.github.io/ucet](img/ucet-qr.png)
 
 # About Me
 
@@ -17,9 +21,9 @@ format:
 
 ## Jeff Winget
 
-::::::: columns
+::::: columns
 :::: {.column width="50%"}
-::: fragment
+::: {.fragment}
 -   Curriculum Specialist
 -   San Juan School District
 -   [jwinget\@sjsd.org](mailto:jwinget@sjsd.org) ![](img/San_Juan_Logo_color.png)
@@ -27,14 +31,14 @@ format:
 ::::
 
 :::: {.column width="50%"}
-::: fragment
+::: {.fragment}
 -   21st year in education
 -   15 years teaching secondary ELA
 -   2 years as a middle school principal
 -   4 years in my current position
 :::
 ::::
-:::::::
+:::::
 
 ## On the Web
 
@@ -109,9 +113,9 @@ format:
 -   The Holysheet
 -   Bringing It Together
 
-# 
+#
 
-::: callout-warning
+::: {.callout-warning}
 The presentation is about to get really geeky.
 :::
 
@@ -365,33 +369,31 @@ def get_alo_data():
     return benchmarks_csv, pm_csv
 ```
 
-## 
+##
 
 ::: {.callout-tip title="Remember"}
-What I'm showing you is what works for us. It is an example of a way to solve a problem locally. What works for us might not work for you.
+What I'm showing you is what works for us.  It is an example of a way to solve a problem locally.  What works for us might not work for you.
 :::
-
 ![](img/puzzle.png){fig-align="center"}
 
 # TOSCRF
 
-::::: columns
+:::: columns
 ::: {.column width="50%"}
 ![](img/toscrf.jpg){fig-align="center"}
 :::
-
 ::: {.column width="50%"}
--   Standardized reading assessment
--   Given in 3 minutes, but hand scored
--   Scoring requires referencing several charts in the manual
+- Standardized reading assessment
+- Given in 3 minutes, but hand scored
+- Scoring requires referencing several charts in the manual
 :::
-:::::
+::::
 
 ## Problem of Practice
 
--   While the test is quick to give to a group of students, grading can be slow and tedious.
--   The most tedious part is referencing the charts to calculate the score.
--   Ideally, this data would be shared in a spreadsheet where it can be visualized and manipulated
+- While the test is quick to give to a group of students, grading can be slow and tedious.
+- The most tedious part is referencing the charts to calculate the score.
+- Ideally, this data would be shared in a spreadsheet where it can be visualized and manipulated
 
 ## Solutions
 
@@ -403,7 +405,7 @@ Automate the chart-referencing part of the scoring
 
 Bring all of the school-based data into a single spreadsheet
 
-``` javascript
+```javascript
 //Google Apps Script
 function combineSheets() {
   let arl_sheet = SpreadsheetApp.openById("SHEET_ID").getSheetByName("Students").getDataRange().getDisplayValues().slice(1);
@@ -438,78 +440,74 @@ function writeToSheet() {
 
 ## A Story {.smaller}
 
-:::::: columns
+:::: columns
 ::: {.column width="33%"}
--   Student Preferred Last Name
--   Student Preferred First Name
--   Student Race
--   IEP Disability
--   ELL
--   Term 1 Total Absences
--   Term 2 Total Absences
--   Term 3 Total Absences
--   Term 4 Total Absences
--   WIDA Overall
+- Student Preferred Last Name
+- Student Preferred First Name
+- Student Race
+- IEP Disability
+- ELL
+- Term 1 Total Absences
+- Term 2 Total Absences
+- Term 3 Total Absences
+- Term 4 Total Absences
+- WIDA Overall
 :::
-
 ::: {.column width="33%"}
--   WIDA Reading
--   WIDA Comprehension
--   WIDA Literacy
--   WIDA Writing
--   WIDA Oral
--   WIDA Speaking
--   WIDA Listening
--   23-24 ELA Performance
--   23-24 ELA Scale Score
--   23-24 Language Performance
+- WIDA Reading
+- WIDA Comprehension
+- WIDA Literacy
+- WIDA Writing
+- WIDA Oral
+- WIDA Speaking
+- WIDA Listening
+- 23-24 ELA Performance
+- 23-24 ELA Scale Score
+- 23-24 Language Performance
 :::
-
 ::: {.column width="34%"}
--   23-24 Listening Comprehension Performance
--   23-24 Reading Informational Text Performance
--   23-24 Reading Literature Performance
--   23-24 Math Performance
--   23-24 Math Scale Score
--   23-24 Measurement and Data and Geometry Performance
+- 23-24 Listening Comprehension Performance
+- 23-24 Reading Informational Text Performance
+- 23-24 Reading Literature Performance
+- 23-24 Math Performance
+- 23-24 Math Scale Score
+- 23-24 Measurement and Data and Geometry Performance
 :::
-::::::
+::::
 
 ## A Story (continued) {.smaller}
 
-:::::: columns
+:::: columns
 ::: {.column width="33%"}
--   23-24 Number and Operations - Fractions Performance
--   23-24 Number and Operations in Base Ten Performance
--   23-24 Operations and Algebraic Thinking Performance
--   23-24 Science Performance
--   23-24 Science Scale Score
--   23-24 Characteristics and Interactions of Earth's Systems Performance
+- 23-24 Number and Operations - Fractions Performance
+- 23-24 Number and Operations in Base Ten Performance
+- 23-24 Operations and Algebraic Thinking Performance
+- 23-24 Science Performance
+- 23-24 Science Scale Score
+- 23-24 Characteristics and Interactions of Earth's Systems Performance
 :::
-
 ::: {.column width="33%"}
--   23-24 Cycling of Matter in Ecosystems Performance
--   23-24 Properties and Changes of Matter Performance
--   TOSCRF Grade Equivalent (BOY)
--   TOSCRF Percentile Rank (BOY)
--   TOSCRF Descriptive Term (BOY)
--   TOSCRF Grade Equivalent (MOY)
+- 23-24 Cycling of Matter in Ecosystems Performance
+- 23-24 Properties and Changes of Matter Performance
+- TOSCRF Grade Equivalent (BOY)
+- TOSCRF Percentile Rank (BOY)
+- TOSCRF Descriptive Term (BOY)
+- TOSCRF Grade Equivalent (MOY)
 :::
-
 ::: {.column width="34%"}
--   TOSCRF Percentile Rank (MOY)
--   TOSCRF Descriptive Term (MOY)
--   TOSCRF Grade Equivalent (EOY)
--   TOSCRF Percentile Rank (EOY)
--   TOSCRF Descriptive Term (EOY)
+- TOSCRF Percentile Rank (MOY)
+- TOSCRF Descriptive Term (MOY)
+- TOSCRF Grade Equivalent (EOY)
+- TOSCRF Percentile Rank (EOY)
+- TOSCRF Descriptive Term (EOY)
 :::
-::::::
+::::
 
 ## Problem of Practice
 
--   Time
--   Immediacy
--   What is the data telling us?
+- Time
+- Immediacy
+- What is the data telling us?
 
 ## This Could Be Really Big
 
@@ -517,138 +515,126 @@ function writeToSheet() {
 
 ## Process
 
-::::::: columns
+::::: columns
 :::: {.column width="50%"}
-::: fragment
--   Gather the data
-    -   What needs to be live?
-    -   What is one-off?
-    -   How can I automate the live data?
+::: {.fragment}
+- Gather the data
+  - What needs to be live?
+  - What is one-off?
+  - How can I automate the live data?
 :::
 ::::
-
 :::: {.column width="50%"}
-::: fragment
--   Choose a storage/display platform
-    -   Easy to use
-    -   Handle large amounts of information
-    -   Flexible structure
+::: {.fragment}
+- Choose a storage/display platform
+  - Easy to use
+  - Handle large amounts of information
+  - Flexible structure
 :::
 ::::
-:::::::
+:::::
 
 ## Gather the Static Data {.smaller}
 
-::::: columns
+:::: columns
 ::: {.column width="50%"}
 ![](https://utah.mypearsonsupport.com/assets/img/ut-logo-5.jpg)
 :::
-
-::: {.column .r-stretch width="50%"}
+::: {.column width="50%" .r-stretch}
 ![](https://utahrise.org/assets/logoAlt.svg)
 
-### 
+###
 
 ![](https://www.act.org/etc/designs/act/clientlibs/act-base/img/logo-act-blue-300.png)
 
-### 
+###
 
 ![](https://wida.wisc.edu/sites/default/files/WIDA_Logo_Horizontal_RGB_UW-Madison_0-WEB.png)
 :::
-:::::
+::::
 
 ## Create Web Scrapers for Dynamic Data {.smaller}
 
-::::: columns
+:::: columns
 ::: {.column width="50%"}
-![](img/attendance.jpg) ![](img/contact.png)
+![](img/attendance.jpg)
+![](img/contact.png)
 :::
-
 ::: {.column width="50%"}
-![](https://acadiencelearning.org/wp-content/themes/divi-child/images/logo.svg) ![](img/toscrf.jpg) ![](img/ckla.jpeg)
+![](https://acadiencelearning.org/wp-content/themes/divi-child/images/logo.svg)
+![](img/toscrf.jpg)
+![](img/ckla.jpeg)
 :::
-:::::
+::::
 
 # Storage Options
 
 ## Google Sheets {.smaller}
 
-::::::: columns
-::: {.column width="50%"}
+::::: columns
+:::: {.column width="50%"}
 ![](img/gsheets.png)
-:::
-
-::::: {.column width="50%"}
-::: fragment
+::::
+:::: {.column width="50%"}
+::: {.fragment}
 ### Pros
-
--   Super easy to use
--   Nice visualizations
--   Intuitive filtering and sorting
+- Super easy to use
+- Nice visualizations
+- Intuitive filtering and sorting
 :::
-
-::: fragment
+::: {.fragment}
 ### Cons
-
--   Size limits can be prohibitive
--   The structure isn't flexible
+- Size limits can be prohibitive
+- The structure isn't flexible
 :::
+::::
 :::::
-:::::::
-
 ## Microsoft SQL {.smaller}
 
-::::::: columns
-::: {.column width="40%"}
+::::: columns
+:::: {.column width="40%"}
 ![](img/sql.png)
-:::
-
-::::: {.column width="60%"}
-::: fragment
+::::
+:::: {.column width="60%"}
+::: {.fragment}
 ### Pros
-
--   Very scaleable, can handle lots of data
--   Same structure as Aspire
--   Great documentation and easy API
+- Very scaleable, can handle lots of data
+- Same structure as Aspire
+- Great documentation and easy API
 :::
-
-::: fragment
+::: {.fragment}
 ### Cons
-
--   The structure isn't flexible
--   It's Microsoft ![](img/linux.png){.absolute bottom="0" right="0" width="300" height="300"}
+- The structure isn't flexible
+- It's Microsoft
+![](img/linux.png){.absolute bottom=0 right=0 width="300" height="300"}
 :::
+::::
 :::::
-:::::::
 
 ## MongoDB {.smaller}
 
-::::::: columns
-::: {.column width="40%"}
+::::: columns
+:::: {.column width="40%"}
 ![](img/mongodb.png)
-:::
-
-::::: {.column width="60%"}
-::: fragment
+::::
+:::: {.column width="60%"}
+::: {.fragment}
 ### Pros
-
--   Very scaleable, can handle lots of data
--   Very flexible structure
--   Great documentation and easy API
--   Open source
+- Very scaleable, can handle lots of data
+- Very flexible structure
+- Great documentation and easy API
+- Open source
 :::
-
-::: fragment
+::: {.fragment}
 ### Cons
-
--   NoSQL databases require the creator to worry about structure and consistency
+- NoSQL databases require the creator to worry about structure and consistency 
 :::
+::::
 :::::
-:::::::
 
 ## Student Data 1
 
-``` json
+```json
 {
   "_id": "11014092",
   "Contact1 Email Address": "PRIVATE",
@@ -733,7 +719,7 @@ function writeToSheet() {
 
 ## Student Data 2
 
-``` json
+```json
 {
   "_id": "11012880",
   "Contact1 Email Address": "PRIVATE",
@@ -1191,17 +1177,19 @@ cols = [
 
 ## Requests
 
--   My colleagues request data from a Google Form
-    -   Google Sheet
-    -   Charts
-    -   PDFs
-    -   Presentations
-
+- My colleagues request data from a Google Form
+  - Google Sheet
+  - Charts
+  - PDFs
+  - Presentations
+  
+# "There are three kinds of lies: lies, damned lies, and statistics." --Mark Twain
+  
 # Back to the Why
 
 ![](img/sinek.png){.r-frame fig-align="center"}
 
-## 
+##
 
 ::: {.callout-tip title="Remember"}
 -   Locally based solutions to problems are better
@@ -1211,6 +1199,6 @@ cols = [
     -   Write programs to handle text streams, because that is a universal interface.
 -   <u>Our</u> students come first
 -   People over programs\
-    \
-    **We have the power to create** <u>our</u> own solutions that will be tailored to <u>our</u> needs and <u>our</u> students.
+\
+**We have the power to create <u>our</u> own solutions that will be tailored to <u>our</u> needs and <u>our</u> students.**
 :::
